@@ -1,0 +1,209 @@
+Create a modern, premium personal portfolio website for me.
+
+Personal Information
+
+* Name: Cheng Phearun
+* Role: Student / Beginner Software Developer
+* Main interests: Programming, Web Development, Software Development
+* Programming skills:
+    * C: 50%
+    * C++: 40%
+    * Java: 10%
+* Add a profile picture section where I can upload and change my own photo.
+* Make the content easy to edit later.
+
+Design
+
+Create a futuristic, professional developer portfolio with:
+
+* Dark modern theme
+* Black / dark navy background
+* Blue and purple glowing accents
+* Glassmorphism cards
+* Smooth animations
+* Hover effects
+* Gradient text
+* Animated background particles or subtle grid
+* Responsive design for desktop, tablet, and mobile
+* Clean and premium UI
+* Modern developer/tech aesthetic
+
+Pages / Sections
+
+1. Home
+
+Create an impressive hero section:
+“Hi, I’m Cheng Phearun”
+“Student & Aspiring Software Developer”
+
+Add:
+
+* Profile picture
+* Short introduction
+* “View My Skills” button
+* “Contact Me” button
+* Social media icons
+* Animated typing effect such as:
+    “C Developer”
+    “C++ Developer”
+    “Java Beginner”
+    “Future Software Engineer”
+
+2. About Me
+
+Create an About Me section explaining that I am learning programming and interested in becoming a software developer.
+
+Include an editable profile card with:
+
+* Name
+* Role
+* Programming interests
+* Location
+* Education
+* Short biography
+
+3. Skills
+
+Create beautiful animated skill cards/progress bars:
+
+C — 50%
+C++ — 40%
+Java — 10%
+
+Show the percentage visually using animated circular progress indicators or modern progress bars.
+
+Make it easy for me to add more skills later.
+
+4. Projects
+
+Create a Projects section with project cards.
+
+Each project should contain:
+
+* Project image
+* Project name
+* Description
+* Technologies used
+* GitHub button
+* Live Demo button
+
+Initially create 3 example projects:
+
+1. C Programming Project
+2. C++ Student Management System
+3. Java Application
+
+Make the projects editable through the backend/admin panel.
+
+5. Education
+
+Create a timeline showing my education and programming-learning journey.
+
+6. Contact
+
+Create a professional contact form:
+
+* Name
+* Email
+* Message
+* Send Message button
+
+The contact form must actually work and store/send submissions through the backend.
+
+7. Footer
+
+Include:
+
+* Cheng Phearun
+* Social media links
+* GitHub
+* Facebook
+* Telegram
+* Copyright
+* Back-to-top button
+
+Backend
+
+Build a real backend, not just a static frontend.
+
+The backend should support:
+
+* User/profile information
+* Profile picture upload
+* Skills management
+* Projects management
+* Education management
+* Contact form submissions
+* Social media links
+
+Create a database to store this information.
+
+Admin Dashboard
+
+Create a secure admin dashboard where I can:
+
+* Edit my name
+* Change my profile picture
+* Edit About Me
+* Add/edit/delete skills
+* Change skill percentages
+* Add/edit/delete projects
+* Upload project images
+* Add/edit education
+* Edit social media links
+* View contact messages
+
+Use authentication for the admin dashboard.
+
+Technical Requirements
+
+* Use React + TypeScript
+* Use Tailwind CSS
+* Use a modern component system
+* Use a proper backend/API
+* Use a database
+* Use secure authentication
+* Use image upload/storage
+* Use form validation
+* Use responsive design
+* Use clean reusable components
+* Organize the code professionally
+* Add loading states
+* Add error handling
+* Add success notifications
+* Do not use fake backend functionality
+
+Extra Features
+
+Add:
+
+* Dark/light mode
+* Smooth page transitions
+* Scroll animations
+* Animated skill percentages
+* Project filtering by technology
+* Download CV button
+* Custom 404 page
+* SEO metadata
+* Open Graph metadata
+* Mobile navigation menu
+* Floating social media buttons
+
+Important
+
+Make the website look like a real professional developer portfolio, not a basic student template.
+
+Use Cheng Phearun as the main identity throughout the website.
+
+Before finishing, make sure:
+
+1. Frontend works
+2. Backend works
+3. Database works
+4. Authentication works
+5. Image upload works
+6. Contact form works
+7. Admin dashboard works
+8. Website is responsive
+9. No broken buttons or links
+10. No placeholder functionality remains

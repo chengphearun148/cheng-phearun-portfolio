@@ -1,0 +1,40 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Cheng Phearun — Student Developer",
+      "hasCanvas": true,
+      "bodyTextLen": 3107,
+      "bodyTextHash": "b6b1d04af0d26e71ddc4b9f6ebe57409506bec1072af52f1dd7c6eff8c9992f5",
+      "bodyTextPrefix": "CP Cheng Phearun Home About Skills Projects Education Contact He",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Cheng Phearun — Student Developer",
+      "hasCanvas": true,
+      "bodyTextLen": 3048,
+      "bodyTextHash": "70a6a19dc15225fa1c9320b14f28bf6684f12348676340466695c334c35dbab8",
+      "bodyTextPrefix": "CP Hello, I'm Cheng Phearun Student & Aspiring Software Develope",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [
+    "BRAND WARNING: this looks like a game/canvas app but src/lib/og/site.json is missing \"type\": \"x:game\". X uses og:type=x:game to present the unfurl as a game card — set it in /workspace/src/lib/og/site.json per /workspace/.grok/skills/og/SKILL.md. Do not invent x:type or overload twitter:card as the game signal.",
+    "BRAND WARNING: this looks like a game/canvas app but /workspace/public/x-banner.jpg is missing. Games need a 50:11 X feed card (1200×264 JPEG) at public/x-banner.jpg — open /workspace/.grok/skills/og/SKILL.md and finish the brand-asset pass."
+  ],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}

@@ -1,0 +1,1 @@
+import{o as e}from"./index-upRROW9k.js";var t=e;export{t as component};

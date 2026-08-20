@@ -1,0 +1,199 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --color-bg: #07090f;
+  --color-bg-elevated: #10141f;
+  --color-bg-subtle: #161b28;
+  --color-fg: #e8eaf2;
+  --color-muted: #9aa0b4;
+  --color-subtle: #6d7388;
+  --color-border: #23283a;
+  --color-accent: #5b8cff;
+  --color-accent-fg: #07090f;
+  --color-violet: #8b7cff;
+  --color-cyan: #6ee7ff;
+  --color-danger: #f07178;
+  --color-success: #4ade80;
+  --color-ring: #5b8cff;
+
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.15rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 1.85rem;
+
+  --shadow-border: 0 0 0 1px color-mix(in oklab, var(--color-fg) 8%, transparent);
+  --shadow-glow: 0 0 0 1px color-mix(in oklab, var(--color-accent) 38%, transparent),
+    0 18px 50px color-mix(in oklab, var(--color-accent) 12%, transparent);
+}
+
+html.light {
+  --color-bg: #f3f4f8;
+  --color-bg-elevated: #ffffff;
+  --color-bg-subtle: #eceef4;
+  --color-fg: #141722;
+  --color-muted: #5b6276;
+  --color-subtle: #7a8194;
+  --color-border: #d4d8e4;
+  --color-accent: #3b6ef5;
+  --color-accent-fg: #ffffff;
+  --color-violet: #6b5ce7;
+  --color-cyan: #0e7490;
+  --color-danger: #dc2626;
+  --color-success: #16a34a;
+  --color-ring: #3b6ef5;
+  --shadow-border: 0 0 0 1px rgba(20, 23, 34, 0.08), 0 1px 2px rgba(20, 23, 34, 0.04);
+  --shadow-glow: 0 0 0 1px color-mix(in oklab, var(--color-accent) 30%, transparent),
+    0 16px 40px color-mix(in oklab, var(--color-accent) 14%, transparent);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html.light {
+    color-scheme: light;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    line-height: 1.55;
+    min-height: 100dvh;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-accent) 40%, transparent);
+    color: var(--color-fg);
+  }
+}
+
+@layer components {
+  .glass {
+    background: color-mix(in oklab, var(--color-bg-elevated) 78%, transparent);
+    backdrop-filter: blur(18px) saturate(1.15);
+    box-shadow: var(--shadow-border);
+  }
+
+  .glow-card {
+    box-shadow: var(--shadow-border);
+    transition-property: box-shadow, transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .glow-card:hover {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .text-glow {
+    background-image: linear-gradient(
+      115deg,
+      var(--color-fg) 0%,
+      var(--color-accent) 48%,
+      var(--color-violet) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .bg-grid {
+    background-image:
+      linear-gradient(
+        to right,
+        color-mix(in oklab, var(--color-fg) 7%, transparent) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        color-mix(in oklab, var(--color-fg) 7%, transparent) 1px,
+        transparent 1px
+      );
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse at center, black 18%, transparent 72%);
+  }
+
+  .hero-glow {
+    background:
+      radial-gradient(
+        ellipse 80% 55% at 50% -8%,
+        color-mix(in oklab, var(--color-accent) 18%, transparent),
+        transparent 58%
+      ),
+      radial-gradient(
+        ellipse 45% 40% at 92% 88%,
+        color-mix(in oklab, var(--color-violet) 16%, transparent),
+        transparent 55%
+      );
+  }
+
+  .page-in {
+    animation: page-in 400ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+    filter: blur(3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes caret {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .page-in,
+  .glow-card {
+    animation: none;
+    transition: none;
+  }
+}

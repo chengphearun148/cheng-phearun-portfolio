@@ -1,0 +1,1 @@
+function e(e){return e.imageId?`/api/media/${e.imageId}`:e.imageUrl}function t(e){return e.profileImageId?`/api/media/${e.profileImageId}`:e.profileImageUrl||`/profile.jpg`}export{e as n,t};

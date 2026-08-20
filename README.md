@@ -1,16 +1,14 @@
 # Cheng Phearun — Portfolio
 
-Personal portfolio: hero, about, skills, projects, education, contact, and an admin dashboard.
+Personal portfolio website: Home, About, Skills, Projects, Education, Contact, CV, and an Admin dashboard.
 
-**Code:** https://github.com/chengphearun148/cheng-phearun-portfolio
+**Code (GitHub):** [https://github.com/chengphearun148/cheng-phearun-portfolio](https://github.com/chengphearun148/cheng-phearun-portfolio)
 
 ---
 
-## 1. What you need on your computer
+## 1. Install these on your computer (free)
 
-Install these first (free):
-
-1. [Node.js LTS](https://nodejs.org/) (version 20 or 22)
+1. [Node.js LTS](https://nodejs.org/) — version 20 or 22
 2. [Git](https://git-scm.com/downloads)
 3. [VS Code](https://code.visualstudio.com/)
 
@@ -18,21 +16,20 @@ Restart VS Code after installing Node.js.
 
 ---
 
-## 2. Open the project in VS Code
+## 2. Open the code in VS Code
 
 1. Open **VS Code**
 2. Press `Ctrl+Shift+P` (Windows) or `Cmd+Shift+P` (Mac)
 3. Type **Git: Clone** and choose it
-4. Paste:
+4. Paste this URL:
 
 ```
 https://github.com/chengphearun148/cheng-phearun-portfolio.git
 ```
 
-5. Pick a folder on your computer
-6. When VS Code asks **Open the repository?** click **Open**
+5. Choose a folder, then click **Open** when VS Code asks
 
-Or in the VS Code terminal:
+Or use the VS Code terminal:
 
 ```bash
 git clone https://github.com/chengphearun148/cheng-phearun-portfolio.git
@@ -40,53 +37,46 @@ cd cheng-phearun-portfolio
 code .
 ```
 
-You can also unzip `cheng-phearun-portfolio.zip` and use **File → Open Folder**.
-
 ---
 
 ## 3. Run it on your computer
 
-In the VS Code terminal (`Ctrl+`` ` or **Terminal → New Terminal**):
+In VS Code, open a terminal (`Ctrl+`` ` or **Terminal → New Terminal**) and run:
 
 ```bash
 npm install
 npm run dev
 ```
 
-Then open:
-
-**http://localhost:8080**
+Then open **http://localhost:8080** in your browser.
 
 Stop the server with `Ctrl+C`.
 
 ---
 
-## 4. Publish it (so friends can open the link)
+## 4. Publish it (share with friends)
 
-Use **Vercel** (free).
+The Grok preview is only for you. To get a public link, deploy on **Vercel** (free).
 
 ### A. Create a free database (Neon)
 
-The live site needs Postgres. Locally it can run without this.
-
-1. Go to https://neon.tech and sign up
+1. Go to [https://neon.tech](https://neon.tech) and sign up
 2. Create a project
-3. Copy the **connection string** (`postgresql://...`)
+3. Copy the connection string (`postgresql://...`)
 
 ### B. Deploy on Vercel
 
-1. Go to https://vercel.com and sign in with **GitHub**
-2. **Add New → Project**
-3. Import `chengphearun148/cheng-phearun-portfolio`
-4. Framework: leave default (Vite)
-5. **Environment Variables** — add:
+1. Go to [https://vercel.com](https://vercel.com) and sign in with **GitHub**
+2. Click **Add New → Project**
+3. Import **chengphearun148/cheng-phearun-portfolio**
+4. Add these **Environment Variables**:
 
 | Name | Value |
 |---|---|
 | `DATABASE_URL` | your Neon connection string |
-| `BETTER_AUTH_SECRET` | a long random string (any 32+ characters) |
+| `BETTER_AUTH_SECRET` | a long random password (32+ characters) |
 
-6. Click **Deploy**
+5. Click **Deploy**
 
 When it finishes, Vercel gives you a URL like:
 
@@ -94,21 +84,19 @@ When it finishes, Vercel gives you a URL like:
 
 **That** is the link you send to friends.
 
-### C. After the first deploy
+### C. After it is live
 
-1. Open your Vercel URL
-2. Click **Admin Login** and create your account
-3. You become the site owner
-4. Edit photo, skills, projects, and social links from the dashboard
+1. Open the Vercel URL
+2. Click **Admin Login** and create an account
+3. You become the owner
+4. Edit your photo, skills, projects, and social links from the dashboard
 
 ---
 
 ## Useful commands
 
 ```bash
-npm run dev          # local preview
+npm run dev          # run locally
 npm run build        # production build
-npm run typecheck    # TypeScript check
+npm run typecheck    # check TypeScript
 ```
-
-Edit your content later in the **Admin** page, or in `migrations/0003_seed.sql` before first deploy.
